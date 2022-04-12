@@ -3,7 +3,7 @@
 }
 
 .marketplace-wrapper {
-    margin: 210px 220px;
+    margin: 210px 220px 0;
 }
 
 .marketplace__title {
@@ -32,8 +32,6 @@
 .sidebar {
     max-width: 348px;
     width: 100%;
-
-    background-color: aliceblue;
 }
 
 .content {
@@ -207,6 +205,7 @@
 
 .achievement {
     margin-top: 70px;
+    margin-bottom: 50px;
 }
 
 .achievement__title {
@@ -247,4 +246,17 @@
     font-size: 16px;
     line-height: 20px;
     color: #6B6B6B;
+}
+
+.description {
+    padding: 40px 220px 40px 564px;
+    background-color: #EEF7FF;
+}
+
+.description__paragraph {
+    margin: 10px 0;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #2D3448;
 }
