@@ -1,9 +1,11 @@
-.marketplace {
+.marketplace,
+.marketplace-detail {
     font-family: 'Montserrat', sans-serif;
 }
 
 .marketplace-wrapper {
-    margin: 210px 220px 0;
+    margin: 50px 220px 0;
+    /* border: 1px solid #333; */
 }
 
 .marketplace__title {
@@ -506,9 +508,13 @@
 .achievement__card {
     display: flex;
     flex-direction: column;
-
+    flex: 0 1 33.333%;
     margin-left: 15px;
     margin-right: 15px;
+}
+
+.achievement__img {
+    width: 100%;
 }
 
 .achievement__position {
@@ -540,3 +546,95 @@
     line-height: 20px;
     color: #2D3448;
 }
+
+
+
+
+
+/* detail page */
+
+.marketplace-detail {
+    display: flex;
+    padding-bottom: 40px;
+    border-bottom: 0.5px solid #C7C7C7;
+}
+
+.detail-logo {
+    margin-right: 40px;
+}
+
+.detail-logo__img {
+    max-width: 120px;
+    max-height: 120px;
+}
+
+.detail-desc-wrap {
+    display: flex;
+}
+
+.detail-desc__title {
+    margin-right: 52px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #2D3448;
+}
+
+.detail-desc__paragraph {
+    margin-top: 8px;
+    margin-bottom: 15px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    color: #6B6B6B;
+}
+
+.detail-desc__price {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: #00B8FF;
+}
+
+.detail-desc__btns {
+    margin-top: 24px;
+}
+
+.detail-desc__btn {
+    margin-right: 20px;
+    padding: 15px 30px;
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.detail-desc__btn--contained {
+    color: #fff;
+    background: #00B8FF;
+}
+
+.detail-desc__btn--outlined {
+    border: 1px solid #00B8FF;
+    color: #00B8FF;
+}
+
+.detail-desc__btn--text {
+    padding-left: 0;
+    color: #00B8FF;
+}
+
+.snippets {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.snippets__title {
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 44px;
+    color: #000000;
+}
+
+ 
