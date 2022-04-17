@@ -1,9 +1,19 @@
 document.addEventListener("DOMContentLoaded", function() {
-  $(".owl-carousel").owlCarousel({
-    nav: true,
-    margin: 20
-  });
+  const owl = document.querySelector(".owl-carousel");
 
+  if (owl) {
+    $(".owl-carousel").owlCarousel({
+      nav: true,
+      margin: 20,
+      
+    });
+  }
+
+  $('ul.desc__list').delegate('li:not(.current)', 'click', function() {
+                $(this).addClass('current').siblings().removeClass('current')
+                    .parents('div.detail-desc').find('div.box').hide().eq($(this).index()).fadeIn(150);
+            })
+ 
     const linksParent = document.querySelector(".decision-filter");
     
     if (linksParent) {

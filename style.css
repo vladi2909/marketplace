@@ -5,6 +5,7 @@
 
 .marketplace-wrapper {
     margin: 50px 220px 0;
+    font-family: 'Montserrat', sans-serif;
     /* border: 1px solid #333; */
 }
 
@@ -237,7 +238,6 @@
 .advertisement {
     width: 100%;
     height: 190px;
-    background-color: antiquewhite;
 }
 
 .advertisement__img {
@@ -637,4 +637,49 @@
     color: #000000;
 }
 
- 
+.snippets .owl-theme .owl-dots .owl-dot.active span {
+    background: #00AEEF;
+}
+    
+.detail-desc .desc__list {
+    margin: 0;
+    padding: 10px 0;
+}
+
+.active-block {
+    display: block;
+}
+
+.hidden-block {
+    display: none;
+}
+
+.desc__list .desc__item {
+    margin-right: 20px;
+    padding: 10px 0;
+    font-size: 17px;
+    color: #000;
+    
+    display: inline;
+    cursor: pointer;
+    position: relative;
+}
+.desc__list .desc__item:hover,
+.vertical .tabs .desc__item:hover {
+
+}
+    
+.desc__list .desc__item.current {
+    color: #00B8FF;
+    border-bottom: 3px solid #00B8FF;
+    cursor: default;
+}
+
+.box {
+    display: none;
+    padding: 0 12px;
+}
+    
+.box.visible {
+    display: block;
+}
