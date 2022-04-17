@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   $('ul.desc__list').delegate('li:not(.current)', 'click', function() {
                 $(this).addClass('current').siblings().removeClass('current')
-                    .parents('div.detail-desc').find('div.box').hide().eq($(this).index()).fadeIn(150);
+                    .parents('div.detail-desc-tabs').find('div.box').hide().eq($(this).index()).fadeIn(150);
             })
  
     const linksParent = document.querySelector(".decision-filter");
