@@ -975,6 +975,16 @@
     }
 }
 
+@media (max-width: 1260px) {
+    .marketplace-wrapper {
+        margin: 24px 30px 0;
+    }
+
+    .description {
+        padding: 32px 30px 32px 298px;
+    }
+}
+
 @media (max-width: 1024px) {
     .marketplace-wrapper {
         margin: 24px 30px 0;
@@ -1006,5 +1016,49 @@
 
     .description {
         padding: 32px 30px 32px 278px;
+    }
+}
+
+@media (max-width: 768px) {
+    .marketplace-wrapper {
+        margin: 24px 20px 0;
+    }
+
+    .marketplace__title {
+        font-size: 40px;
+    }
+
+    .body {
+        margin-top: 30px;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .content {
+        margin-left: 0;
+    }
+
+    .features {
+        margin-top: 12px;
+    }
+
+    .description {
+        padding: 32px 20px 32px 20px;
+    }
+}
+
+@media (max-width: 320px) {
+    .grid-inner {
+        width: 100%;
+    }
+
+    .features {
+        flex-direction: column;
+    }
+
+    .achievement__cards {
+        flex-direction: column;
     }
 }
