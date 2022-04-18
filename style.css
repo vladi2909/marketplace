@@ -412,7 +412,7 @@
 
 .grid__header {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
 }
 
 .grid-header-wrap {
@@ -432,6 +432,13 @@
 
 .grid__headline {
     margin-left: 20px;
+    width: 87%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.headline-wrap {
+    /* display: flex; */
 }
 
 .grid__tile {
@@ -965,5 +972,39 @@
 
     .achievement__desc {
         font-size: 14px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .marketplace-wrapper {
+        margin: 24px 30px 0;
+    }
+
+    .sidebar {
+        min-width: 218px;
+    }
+
+    .grid__headline {
+        flex-direction: column;
+    }
+
+    .headline-wrap {
+        order: 2;
+    }
+
+    .grid__rating {
+        order: 1;
+    }
+
+    .achievement {
+        margin-bottom: 44px;
+    }
+
+    .achievement__cards {
+        margin-top: 27px;
+    }
+
+    .description {
+        padding: 32px 30px 32px 278px;
     }
 }
