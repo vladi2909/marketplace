@@ -6,7 +6,6 @@
 .marketplace-wrapper {
     margin: 50px 220px 0;
     font-family: 'Montserrat', sans-serif;
-    /* border: 1px solid #333; */
 }
 
 .marketplace__title {
@@ -33,9 +32,8 @@
 }
 
 .sidebar {
-    max-width: 348px;
+    min-width: 348px;
     width: 100%;
-    /* border: 1px solid #333; */
 }
 
 .sidebar__title {
@@ -88,8 +86,8 @@
 
 .parametrs-filter,
 .parametrs-editorship {
-    margin-top: 25px;
-    margin-bottom: 25px;
+    margin-top: 32px;
+    margin-bottom: 32px;
     padding-left: 13px;
 }
 
@@ -101,7 +99,7 @@
 .container {
     display: block;
     position: relative;
-    padding-left: 35px;
+    padding-left: 32px;
     margin-bottom: 16px;
     cursor: pointer;
     font-weight: 500;
@@ -114,56 +112,56 @@
     user-select: none;
 }
   
-  /* Hide the browser's default checkbox */
-  .container input {
+/* Hide the browser's default checkbox */
+.container input {
     position: absolute;
     opacity: 0;
     cursor: pointer;
     height: 0;
     width: 0;
-  }
-  
-  /* Create a custom checkbox */
-  .checkmark {
+}
+
+/* Create a custom checkbox */
+.checkmark {
     position: absolute;
     top: 0;
     left: 0;
-    height: 20px;
-    width: 20px;
+    height: 18px;
+    width: 18px;
     border: 1px solid #C4C4C4;
     /* background-color: #eee; */
     border-radius: 2.6px;
-  }
-  
-  /* On mouse-over, add a grey background color */
-  .container:hover input ~ .checkmark {
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
     background-color: #eee;
-  }
-  
-  /* When the checkbox is checked, add a blue background */
-  .container input:checked ~ .checkmark {
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
     background-color: #56C1EA;
     border: none;
-    width: 22px;
-    height: 22px;
-  }
-  
-  /* Create the checkmark/indicator (hidden when not checked) */
-  .checkmark:after {
+    width: 20px;
+    height: 20px;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
     content: "";
     position: absolute;
     display: none;
-  }
-  
-  /* Show the checkmark when checked */
-  .container input:checked ~ .checkmark:after {
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
     display: block;
-  }
-  
-  /* Style the checkmark/indicator */
-  .container .checkmark:after {
-    left: 8px;
-    top: 3px;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+    left: 7px;
+    top: 2px;
     width: 4px;
     height: 9px;
     border: solid white;
@@ -171,9 +169,7 @@
     -webkit-transform: rotate(42deg);
     -ms-transform: rotate(42deg);
     transform: rotate(42deg);
-  }
-
-
+}
 
 .news {}
 
@@ -181,6 +177,11 @@
     margin-bottom: 25px;
     display: block;
     text-decoration: none;
+}
+
+.news__card:hover {
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.07);
+    border-radius: 4px;
 }
 
 .news__img {
@@ -229,6 +230,8 @@
 }
 
 .news__paragraph {
+    margin: 12px 0 0;
+    padding-bottom: 12px;
     font-weight: 500;
     font-size: 16px;
     line-height: 20px;
@@ -544,11 +547,15 @@
 }
 
 .description__paragraph {
-    margin: 10px 0;
+    margin: 0 0 20px 0;
     font-weight: 500;
     font-size: 16px;
     line-height: 20px;
     color: #2D3448;
+}
+
+.description__paragraph:last-child {
+    margin: 0;
 }
 
 /* detail page */
@@ -771,6 +778,44 @@
 }
 
 /* adaptive */
+@media (max-width: 1810px) {
+    .marketplace-wrapper {
+        margin: 50px 200px 0;
+    }
+
+    .filter__title {
+        display: none;
+    }
+
+    .sidebar {
+        min-width: 238px;
+    }
+
+    .features__title {
+        font-size: 18px;
+    }
+
+    .description {
+        padding: 40px 200px 40px 465px;
+    }
+
+}
+
+@media (max-width: 1510px) {
+    .features__title {
+        font-size: 16px;
+    }
+
+    .custom-select {
+        min-width: 153px;
+    }
+
+    .select-items div, .select-selected {
+        font-size: 12px;
+    }
+}
+
+
 @media (max-width: 1440px) {
     .marketplace-wrapper {
         margin: 46px 200px 0;
@@ -782,8 +827,20 @@
         text-transform: inherit;
     }
 
+    .body {
+        margin-top: 60px;
+    }
+
     .sidebar {
-        max-width: 238px;
+        min-width: 238px;
+    }
+
+    .decision-filter__link {
+        padding: 9px 13px;
+    }
+
+    .features {
+        margin-top: 20px;
     }
 
     .features__title {
@@ -794,6 +851,52 @@
         display: none;
     }
 
+    .decision-filter-wrap {
+        margin-top: 30px;
+    }
+
+    .decision-filter__link,
+    .container {
+        font-size: 14px;
+    }
+
+    .content-wrap {
+        margin: 8px;
+    }
+
+    .news__card {
+        margin-bottom: 18px;
+    }
+
+    .news__caption {
+        margin-bottom: 13px;
+        font-size: 16px;
+    }
+
+    .news__title {
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+    .news__paragraph {
+        margin: 10px 0 0;
+        padding-bottom: 8px;
+        font-size: 12px;
+        line-height: 15px;
+    }
+
+    .subject {
+        margin-bottom: 10px;
+    }
+
+    .subject__title {
+        font-size: 12px;    
+    }
+
+    .subject__date {
+        font-size: 8px;
+    }
+
     .custom-select {
         min-width: 153px;
     }
@@ -801,6 +904,10 @@
     .select-items div,
     .select-selected {
         font-size: 12px;
+    }
+
+    .grid {
+        margin-top: 30px;
     }
 
     .grid__element {
@@ -821,16 +928,42 @@
         font-size: 18px;
     }
 
+    .grid__price-old {
+        margin-left: 12px;
+        align-self: flex-start;
+        font-size: 12px;
+    }
+
     .grid__excerpt {
+        margin: 12px 0;
         font-size: 14px;
+        line-height: 120%;
     }
 
 
     .description {
-        padding: 40px 200px 40px 410px;
+        padding: 32px 200px 32px 464px;
     }
 
     .description__paragraph {
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+    .achievement__title {
+        font-size: 20px;
+    }
+
+    .achievement__cards {
+        margin-top: 32px;
+    }
+
+    .achievement__position {
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+    .achievement__desc {
         font-size: 14px;
     }
 }
