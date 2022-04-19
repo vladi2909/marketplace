@@ -422,6 +422,8 @@
 .grid__logo {
     width: 60px;
     height: 60px;
+    border-radius: 4px;
+    overflow: hidden;
 }
 
 .grid__img {
@@ -784,10 +786,296 @@
     font-size: 12px;
 }
 
+/* select2 */
+.selectNative,
+.selectCustom {
+  position: relative;
+  width: 126px;
+}
+
+.selectCustom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+
+@media (hover: hover) {
+  .selectCustom {
+    display: block;
+  }
+
+  .selectNative:focus + .selectCustom {
+    display: none;
+  }
+}
+
+/* Add the focus states too, They matter, always! */
+.selectNative:focus,
+.selectCustom.isActive .selectCustom-trigger {
+  outline: none;
+}
+
+.select {
+  position: relative;
+  margin-right: 12px;
+}
+
+.selectLabel {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.4rem;
+}
+
+.selectWrapper {
+  position: relative;
+}
+
+.selectNative,
+.selectCustom-trigger {
+  background-color: #fff;
+  border: 1px solid #C7C7C7;
+  border-radius: 4px;
+}
+
+.selectNative {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+  background-position-y: 0.8rem;
+  padding: 0rem 0.8rem;
+}
+
+.selectCustom-trigger {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  font-weight: 500;
+  /* padding: 0.6rem 0.6rem; */
+  padding: 8px 12px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.selectCustom-trigger::after {
+    content: url("../images/arrow12.png");
+  position: absolute;
+  /* top: 0; */
+  /* line-height: 2rem; */
+  right: 0.8rem;
+}
+
+.selectCustom-options {
+  position: absolute;
+  top: calc(2.2rem + 6px);
+  left: 0;
+  width: 100%;
+  border: 1px solid #C7C7C7;
+  border-radius: 0.4rem;
+  background-color: #fff;
+  box-shadow: 0 0 4px #e9e1f8;
+  z-index: 1;
+  display: none;
+  overflow: hidden;
+}
+
+.selectCustom.isActive .selectCustom-options {
+  display: block;
+}
+
+.selectCustom-option {
+  position: relative;
+  padding: 8px 12px;
+  font-size: 14px;
+}
+
+.selectCustom-option.isHover,
+.selectCustom-option:hover {
+  background-color: #0097CF;
+  color: white;
+  cursor: pointer;
+}
+
+.selectCustom-option.isActive::before {
+    content: "✓";
+    position: absolute;
+    left: 0.8rem;
+  }
+
+body {
+  box-sizing: border-box;
+  line-height: 1.5;
+  min-height: 120vh;
+}
+
+body * {
+  box-sizing: inherit;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 1.6rem;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.card {
+  position: relative;
+  margin: 2rem auto;
+  max-width: calc(100% - 2rem);
+  width: 40rem;
+  background: white;
+  padding: 3rem;
+  box-shadow: 0.2rem 0.2rem #e9e1f8;
+}
+
+.inst {
+  margin-bottom: 1rem;
+}
+
+.note {
+  font-size: 1.4rem;
+  margin: 2rem 0 0;
+  color: #6b6b6b;
+}
+
+.link {
+  display: inline-block;
+  color: inherit;
+  text-decoration-color: #0097CF;
+  padding: 0.1rem 0.2rem;
+  transform: translateX(-0.1em);
+  margin-right: -0.1em;
+}
+
+.link:hover {
+    color: #0097CF;
+}
+
+.link:focus {
+    outline: none;
+    background-color: #e9e1f8;
+}
+
+
+/* select-checkbox */
+.mobile-sidebar {
+    margin-top: 13px;
+    display: none;
+}
+
+.checkselect {
+	position: relative;
+	display: inline-block;
+	min-width: 153px;
+    margin-right: 12px;
+}
+.checkselect-control {
+	position: relative;
+	padding: 0 !important;
+}		
+.checkselect-control select {
+    font-family: 'Montserrat';
+	position: relative;
+	display: inline-block;
+	width: 100%;
+	margin: 0;
+    padding: 10px;
+	padding-left: 5px;
+    font-size: 12px;
+    font-weight: 500;
+    border: 1px solid #C7C7C7;
+    border-radius: 4px;
+    outline: none;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+    background: url("../images/arrow12.png") no-repeat right 13px center;
+}
+
+.checkselect-control select::-ms-expand {
+    display: none;
+}
+
+.checkselect-over {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0; 			
+	cursor: pointer;
+}
+.checkselect-popup {
+	display: none;
+	box-sizing: border-box;
+	margin: 0;
+    margin-top: 5px;
+	padding: 0;
+	width: 100%;
+	height: auto;
+	position: absolute;
+	top: 100%;
+	left: 0px; 
+	border: 1px solid #C7C7C7;
+	background: #fff;
+	z-index: 9999;
+	overflow: auto;
+	user-select: none;
+    border-radius: 4px;
+}	
+.checkselect label {
+	position: relative;
+	display: block;
+	margin: 0;
+	padding: 12px 6px 12px 25px;
+	font-size: 14px;
+	line-height: 1.1;
+	cursor: pointer;
+}			
+.checkselect-popup input {
+	position: absolute;
+	top: 14px; 
+	left: 8px;
+	margin: 0 !important;
+	padding: 0;
+}
+.checkselect-popup label:hover {
+	background: #0097CF;
+	color: #fff;
+}
+.checkselect-popup fieldset {
+	display: block;
+	margin:  0;
+	padding: 0;
+	border: none;
+}
+.checkselect-popup fieldset input {
+	left: 15px;
+}		
+.checkselect-popup fieldset label {
+	padding-left: 32px;
+}		
+.checkselect-popup legend {
+	display: block;
+	margin: 0;
+	padding: 5px 8px;
+	font-weight: 700;
+	font-size: 1em;
+	line-height: 1.1;
+}
+
 /* adaptive */
 @media (max-width: 1810px) {
     .marketplace-wrapper {
-        margin: 50px 200px 0;
+        margin: 50px 160px 0;
     }
 
     .filter__title {
@@ -800,6 +1088,10 @@
 
     .features__title {
         font-size: 18px;
+    }
+
+    .grid__headline {
+        width: 82%;
     }
 
     .description {
@@ -823,7 +1115,7 @@
 }
 
 
-@media (max-width: 1440px) {
+@media (max-width: 1485px) {
     .marketplace-wrapper {
         margin: 46px 200px 0;
     }
@@ -975,7 +1267,7 @@
     }
 }
 
-@media (max-width: 1260px) {
+@media (max-width: 1340px) {
     .marketplace-wrapper {
         margin: 24px 30px 0;
     }
@@ -994,12 +1286,26 @@
         min-width: 218px;
     }
 
+    .decision-filter__link, .container {
+        font-size: 16px;
+    }
+
+    .grid__logo {
+        width: 60px;
+        height: 60px;
+    }
+
     .grid__headline {
+        width: 70%;
         flex-direction: column;
     }
 
     .headline-wrap {
         order: 2;
+    }
+
+    .grid__excerpt {
+        font-size: 16px;
     }
 
     .grid__rating {
@@ -1019,7 +1325,7 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 860px) {
     .marketplace-wrapper {
         margin: 24px 20px 0;
     }
@@ -1034,6 +1340,10 @@
 
     .sidebar {
         display: none;
+    }
+
+    .mobile-sidebar {
+        display: flex;
     }
 
     .content {
