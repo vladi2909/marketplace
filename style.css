@@ -797,7 +797,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  display: none;
+  /* display: none; */
 }
 
 
@@ -890,7 +890,8 @@
 .selectCustom-option {
   position: relative;
   padding: 8px 12px;
-  font-size: 14px;
+  font-size: 12px;
+  font-weight: 500;
 }
 
 .selectCustom-option.isHover,
@@ -900,11 +901,11 @@
   cursor: pointer;
 }
 
-.selectCustom-option.isActive::before {
+/* .selectCustom-option.isActive::before {
     content: "✓";
     position: absolute;
     left: 0.8rem;
-  }
+} */
 
 body {
   box-sizing: border-box;
@@ -1114,7 +1115,6 @@ body * {
     }
 }
 
-
 @media (max-width: 1485px) {
     .marketplace-wrapper {
         margin: 46px 200px 0;
@@ -1203,6 +1203,11 @@ body * {
     .select-items div,
     .select-selected {
         font-size: 12px;
+    }
+
+    .same-as-selected {
+        color: #fff;
+        background-color: #0097CF;
     }
 
     .grid {
@@ -1356,6 +1361,76 @@ body * {
 
     .description {
         padding: 32px 20px 32px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .marketplace__title {
+        font-weight: 800;
+    }
+}
+
+@media (max-width: 638px) {
+    .features {
+        flex-direction: column;
+        border-bottom: none;
+    }
+
+    .features__title {
+        padding-bottom: 12px;
+        border-bottom: 0.5px solid #C7C7C7;
+    }
+
+    .filter {
+        margin-top: 12px;
+    }
+
+    .custom-select {
+        margin-left: 0;
+        margin-right: 12px;
+    }
+
+    .mobile-sidebar {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 450px) {
+    .mobile-sidebar {
+        flex-wrap: wrap;
+    }
+
+    .select {
+        margin-bottom: 12px;
+    }
+
+    .checkselect {
+        margin-bottom: 12px;
+    }
+
+    .grid-inner {
+        width: 100%;
+    }
+
+    .achievement__cards {
+        flex-direction: column;
+    }
+
+    .achievement__card {
+        margin-bottom: 28px;
+    }
+
+    .achievement__position {
+        font-size: 16px;
+    }
+
+    .achievement__desc {
+        font-size: 16px;
+    }
+
+    .description__paragraph {
+        font-size: 16px;
+        line-height: 20px;
     }
 }
 
